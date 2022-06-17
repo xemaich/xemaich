@@ -20,7 +20,7 @@ echo "[Unit]
 Description=StarkNet
 After=network.target
 
-
+[Service]
 User=$USER
 Type=simple
 WorkingDirectory=$HOME/pathfinder/py
@@ -28,7 +28,7 @@ ExecStart=/bin/bash -c \"source $HOME/pathfinder/py/.venv/bin/activate && /usr/l
 Restart=on-failure
 LimitNOFILE=65535
 
-
+[Install]
 WantedBy=multi-user.target" > $HOME/starknetd.service
 mv $HOME/starknetd.service /etc/systemd/system/
 sudo systemctl restart systemd-journald
