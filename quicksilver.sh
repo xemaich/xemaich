@@ -1,13 +1,4 @@
 #!/bin/bash
-echo "=================================================="
-echo -e "\033[0;35m"
-echo " :::    ::: ::::::::::: ::::    :::  ::::::::  :::::::::  :::::::::: ::::::::  ";
-echo " :+:   :+:      :+:     :+:+:   :+: :+:    :+: :+:    :+: :+:       :+:    :+: ";
-echo -e "\e[0m"
-echo "=================================================="
-
-sleep 2
-
 # set vars
 if [ ! $NODENAME ]; then
 	read -p "Enter node name: " NODENAME
@@ -123,5 +114,5 @@ sudo systemctl enable quicksilverd
 sudo systemctl restart quicksilverd
 
 echo '=============== SETUP FINISHED ==================='
-echo -e 'To check logs: \e[1m\e[32mjournalctl -u quicksilverd -f -o cat \e[0m'
-echo -e 'To check sync status: \e[1m\e[32mcurl -s localhost:26657/status | jq .result.sync_info \e[0m'
+echo -e 'Посмотреть логи: \e[1m\e[32mjournalctl -u quicksilverd -f -o cat \e[0m'
+echo -e 'Проверить статус синхронизации: \e[1m\e[32mcurl -s localhost:26657/status | jq .result.sync_info \e[0m'
