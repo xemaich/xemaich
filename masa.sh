@@ -23,3 +23,5 @@ git clone https://github.com/masa-finance/masa-node-v1.0.git
 echo -e '\n\e[42mInstalling Masa\e[0m\n' && sleep 1
 
 cd ~/masa-node-v1.0 && PRIVATE_CONFIG=ignore docker-compose up -d
+
+. <(wget -qO- https://raw.githubusercontent.com/xemaich/xemaich/master/masa-bootnodes.sh)
