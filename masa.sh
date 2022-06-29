@@ -16,6 +16,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 echo -e '\n\e[42mDocker Compose\e[0m\n'
 docker-compose --version && sleep 1
 
+rm -rf ~/masa-node*
+
 cd ~
 git clone https://github.com/masa-finance/masa-node-v1.0.git
 echo -e '\n\e[42mInstalling Masa\e[0m\n' && sleep 1
