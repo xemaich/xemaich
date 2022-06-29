@@ -92,7 +92,5 @@ networks:
 volumes:
   "vol1":
 EOF
-echo "Бутнода добавлена (Bootnode added)"
-echo "Перезапускаем докер... (Restarting docker image...)"
 cd /$user/masa-node-v1.0/ && docker-compose down && PRIVATE_CONFIG=ignore docker-compose up -d && cd $HOME
-echo "DONE"
+echo "Нода Masa установлена и работает"
