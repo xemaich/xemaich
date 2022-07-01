@@ -55,5 +55,5 @@ echo -e '\n\e[42mПроверка статуса ноды\e[0m\n' && sleep 1
 if [[ `service suid status | grep active` =~ "running" ]]; then
   echo -e "Нода Sui \e[32mустановлена и работает\e[39m!"
 else
-  echo -e "Your Sui Node \e[31mwas not installed correctly\e[39m, please reinstall."
+  echo -e "Нода Sui \e[31mустановлена некорректно\e[39m, требуется переустановка."
 fi
